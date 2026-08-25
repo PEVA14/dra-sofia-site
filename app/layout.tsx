@@ -52,6 +52,58 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  name: "Dra. Sofía Vargas Astorga",
+  description:
+    "Médica pediatra certificada por el Consejo Mexicano de Pediatría. Atención para bebés, niños y adolescentes en Durango.",
+  url: "https://www.sofiavargaspediatra.com",
+  telephone: "+526181879509",
+  image: "https://www.sofiavargaspediatra.com/og-image.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Paseo de los Pinos #501, Col. Esperanza",
+    addressLocality: "Durango",
+    addressRegion: "Dgo.",
+    addressCountry: "MX",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 24.0277,
+    longitude: -104.6532,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "14:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "16:00",
+      closes: "19:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "09:00",
+      closes: "13:00",
+    },
+  ],
+  medicalSpecialty: "Pediatric",
+  availableService: [
+    { "@type": "MedicalTherapy", name: "Atención al Recién Nacido" },
+    { "@type": "MedicalTherapy", name: "Control de Crecimiento y Desarrollo" },
+    { "@type": "MedicalTherapy", name: "Orientación en Vacunación" },
+    { "@type": "MedicalTherapy", name: "Consulta Pediátrica General" },
+    { "@type": "MedicalTherapy", name: "Seguimiento de Salud Infantil" },
+    { "@type": "MedicalTherapy", name: "Evaluación Integral" },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -59,6 +111,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
