@@ -5,7 +5,7 @@
 export const DOCTOR = {
   name: "Dra. Sofía Vargas Astorga",
   shortName: "Dra. Sofía Vargas",
-  title: "Médica Pediatra",
+  title: "Médico Pediatra",
   cedula: "Cédula de Especialidad: 14966705",
   certificado: "Certificado CMeP No. 28082",
   /**
@@ -14,7 +14,7 @@ export const DOCTOR = {
    * Mientras tanto, se muestra un placeholder.
    */
   photo: "/doctor-photo.jpg",
-  bio: `Soy médica pediatra con formación especializada y una convicción genuina: que cada niño merece atención cuidadosa y cada familia merece claridad.
+  bio: `Soy médico pediatra con formación especializada y una convicción genuina: que cada niño merece atención cuidadosa y cada familia merece claridad.
 
 Mi práctica está basada en evidencia clínica actualizada, pero sobre todo en la escucha activa y el trato humano. Atiendo desde recién nacidos hasta adolescentes, acompañando a las familias en cada etapa del crecimiento de sus hijos.`,
   philosophy:

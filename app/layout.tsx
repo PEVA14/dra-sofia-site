@@ -11,13 +11,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sofiavargaspediatra.com"),
 
-  title: "Dra. Sofía Vargas Astorga | Médica Pediatra en Durango",
+  title: "Dra. Sofía Vargas Astorga | Médico Pediatra en Durango",
   description:
     "Consulta pediátrica personalizada con la Dra. Sofía Vargas Astorga. Atención para bebés, niños y adolescentes en Durango. Citas al 618 187 9509.",
   keywords: [
     "pediatra Durango",
     "pediatría Durango",
-    "médica pediatra Durango",
+    "médico pediatra Durango",
     "Dra Sofía Vargas",
     "consulta pediátrica",
     "pediatra niños Durango",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Dra. Sofía Vargas Astorga | Médica Pediatra en Durango",
+    title: "Dra. Sofía Vargas Astorga | Médico Pediatra en Durango",
     description:
       "Atención pediátrica cálida, profesional y personalizada para tu hijo en Durango. Agenda tu cita por WhatsApp.",
     url: "https://www.sofiavargaspediatra.com",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Dra. Sofía Vargas Astorga — Médica Pediatra en Durango",
+        alt: "Dra. Sofía Vargas Astorga — Médico Pediatra en Durango",
       },
     ],
   },
@@ -57,7 +57,7 @@ const jsonLd = {
   "@type": "Physician",
   name: "Dra. Sofía Vargas Astorga",
   description:
-    "Médica pediatra certificada por el Consejo Mexicano de Pediatría. Atención para bebés, niños y adolescentes en Durango.",
+    "Médico pediatra certificada por el Consejo Mexicano de Pediatría. Atención para bebés, niños y adolescentes en Durango.",
   url: "https://www.sofiavargaspediatra.com",
   telephone: "+526181879509",
   image: "https://www.sofiavargaspediatra.com/og-image.jpg",

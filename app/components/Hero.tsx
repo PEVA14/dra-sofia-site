@@ -30,7 +30,7 @@ export default function Hero() {
                 aria-hidden="true"
                 className="w-2 h-2 rounded-full bg-brand-cyan"
               />
-              Médica Pediatra · Durango, México
+              Médico Pediatra · Durango, México
             </div>
 
             {/* Name */}
