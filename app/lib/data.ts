@@ -44,8 +44,7 @@ export const CONTACT = {
   city: "Durango, Dgo., México",
 
   // TODO: Reemplazar con el enlace real a Google Maps
-  maps_url:
-    "https://maps.google.com/?q=Paseo+de+los+Pinos+501+Col.+Esperanza+Durango",
+  maps_url: "https://maps.app.goo.gl/n7c1Zg6XMViVbAzz9",
 };
 
 export const HOURS: { day: string; time: string }[] = [
