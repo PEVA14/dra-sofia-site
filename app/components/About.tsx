@@ -1,4 +1,5 @@
 import { DOCTOR } from "../lib/data";
+import AboutCarousel from "./AboutCarousel";
 
 export default function About() {
   const paragraphs = DOCTOR.bio.split("\n\n").filter(Boolean);
@@ -18,7 +19,7 @@ export default function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          {/* ── Photo placeholder ───────────────────────────── */}
+          {/* ── Photo carousel ───────────────────────────── */}
           <div className="flex justify-center">
             <div className="relative">
               {/* Decorative offset card */}
@@ -29,12 +30,7 @@ export default function About() {
 
               {/* Photo frame */}
               <div className="relative w-72 sm:w-80 lg:w-96 h-80 sm:h-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/doctor-photo.jpg"
-                  alt="Consulta pediátrica — bebé durante revisión con estetoscopio"
-                  className="w-full h-full object-cover object-center"
-                />
+                <AboutCarousel />
               </div>
 
               {/* Floating badge */}
