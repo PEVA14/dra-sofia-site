@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
 
             {/* Name */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-5 tracking-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-brand-cyan-dark leading-tight mb-5 tracking-tight">
               {DOCTOR.shortName}
             </h1>
 
