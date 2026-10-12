@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { DOCTOR, CONTACT } from "../lib/data";
 
 export default function Hero() {
@@ -20,6 +21,25 @@ export default function Hero() {
         <div className="absolute top-1/2 -left-32 w-[400px] h-[400px] rounded-full bg-brand-purple/5 blur-3xl" />
       </div>
 
+      {/* Watercolor wash in brand colors, peeking out past the photo's dissolving edge */}
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute rounded-full bg-brand-cyan opacity-[0.14] blur-[70px] w-[70%] h-40 left-[5%] top-[23rem] sm:top-[29rem] lg:w-[22%] lg:h-[55%] lg:left-[38%] lg:top-[4%]" />
+        <div className="absolute rounded-full bg-brand-purple opacity-[0.12] blur-[80px] w-[60%] h-40 right-[0%] top-[25rem] sm:top-[31rem] lg:w-[24%] lg:h-[50%] lg:left-[40%] lg:right-auto lg:top-[48%]" />
+      </div>
+
+      {/* Photo background: an organic, grain-dissolved SVG mask melts it into the page */}
+      <div className="hero-photo-mask absolute inset-x-0 top-0 h-[30rem] sm:h-[38rem] lg:inset-y-0 lg:left-[40%] lg:h-auto">
+        <Image
+          src="/HeaderIMG-hero.jpg"
+          alt="La doctora sostiene a un recién nacido mientras sus papás lo miran"
+          fill
+          preload
+          quality={90}
+          sizes="(min-width: 1024px) 60vw, 100vw"
+          className="object-cover object-[65%_30%] sm:object-[50%_30%] lg:object-[50%_35%] contrast-[1.06] saturate-[1.08]"
+        />
+      </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* ── Text ────────────────────────────────────────── */}
@@ -34,7 +54,7 @@ export default function Hero() {
             </div>
 
             {/* Name */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-5 tracking-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-brand-cyan-dark leading-tight mb-5 tracking-tight">
               {DOCTOR.shortName}
             </h1>
 
@@ -84,27 +104,25 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── Logo visual ─────────────────────────────────── */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
-            <div className="relative flex items-center justify-center w-full">
-              {/* Soft glow */}
-              <div
-                aria-hidden="true"
-                className="absolute w-80 h-80 rounded-full bg-brand-cyan/12 blur-3xl"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute w-64 h-64 rounded-full bg-brand-purple/8 blur-2xl translate-x-10 translate-y-6"
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/vector_4.png"
-                alt="Dra. Sofía Vargas — Pediatra"
-                className="relative w-64 sm:w-80 lg:w-full h-auto object-contain drop-shadow-md"
-              />
-            </div>
-          </div>
+          {/* Spacer: keeps the photo visible above the text on small screens */}
+          <div
+            aria-hidden="true"
+            className="order-1 lg:order-2 min-h-[17rem] sm:min-h-[24rem] lg:min-h-[28rem]"
+          />
         </div>
+      </div>
+
+      <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-10">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -m-3 rounded-full bg-white/50 blur-xl"
+        />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/vector_4.png"
+          alt="Dra. Sofía Vargas — Pediatra"
+          className="relative w-20 sm:w-28 lg:w-40 h-auto drop-shadow-md"
+        />
       </div>
     </section>
   );
